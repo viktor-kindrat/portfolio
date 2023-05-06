@@ -1,0 +1,5 @@
+@import "../../../Fonts/ArimaMandurai/style.css";
+@import "../../../Fonts/Raleway/Relaway.css";
+* {
+    font-family: "Relaway", sans-serif;
+}
