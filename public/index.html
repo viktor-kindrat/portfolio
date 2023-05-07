@@ -116,6 +116,7 @@
                 scaleY: [0, 1.2],
                 d: LOADER.path.getAttribute("pathdata:id")
             });
+            clearInterval(x)
         };
         window.addEventListener("load", () => {
             setTimeout(svgAnimation, 1500);

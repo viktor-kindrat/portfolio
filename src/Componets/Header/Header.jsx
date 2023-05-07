@@ -36,15 +36,26 @@ function Header() {
             tl.then(()=>playing.current = false)
         }
     }, [openMenu])
+
+    let menuMosueEnter = useCallback(function(e){
+        let targets = document.querySelectorAll(`.${e.target.classList[0]}`);
+        targets.forEach(tar=>tar.classList.add(`${e.target.classList[0]}_opacity-low`))
+        e.target.classList.remove(`${e.target.classList[0]}_opacity-low`)
+    }, [])
+
+    let menuMouseLeave = useCallback(function(e){
+        let targets = document.querySelectorAll(`.${e.target.classList[0]}`);
+        targets.forEach(tar=>tar.classList.remove(`${e.target.classList[0]}_opacity-low`))
+    }, [])
     return (
         <header className="Header">
             <img src={logo} alt="VK" className="Header__logo" />
             <nav className="Header__nav">
                 <ul className="Header__nav-list">
-                    <li className="Header__nav-item"><a href="/" className="Header__link">About me</a></li>
-                    <li className="Header__nav-item"><a href="/" className="Header__link">SkilLs and certifications</a></li>
-                    <li className="Header__nav-item"><a href="/" className="Header__link">Projects</a></li>
-                    <li className="Header__nav-item"><a href="/" className="Header__link">Get in touch</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">About me</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">SkilLs and certifications</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">Projects</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">Get in touch</a></li>
                 </ul>
             </nav>
             <button onClick={mobileMenuHandler} type="button" className="Header__nav-switcher">
