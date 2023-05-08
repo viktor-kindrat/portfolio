@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #141414;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+}

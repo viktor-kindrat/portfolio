@@ -1,0 +1,62 @@
+@keyframes wave-animation {
+    0% {
+        transform: rotate( 0.0deg)
+    }
+    10% {
+        transform: rotate(14.0deg)
+    }
+    20% {
+        transform: rotate(-8.0deg)
+    }
+    30% {
+        transform: rotate(14.0deg)
+    }
+    40% {
+        transform: rotate(-4.0deg)
+    }
+    50% {
+        transform: rotate(10.0deg)
+    }
+    60% {
+        transform: rotate( 0.0deg)
+    }
+    100% {
+        transform: rotate( 0.0deg)
+    }
+}
+
+@mixin scale($val) {
+    transform: scale($val);
+    -webkit-transform: scale($val);
+    -moz-transform: scale($val);
+    -ms-transform: scale($val);
+    -o-transform: scale($val);
+}
+
+.MainBodyAnimation {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    transform-origin: 100% 100%;
+    @include scale(90%);
+    .MainBodyAnimation__image {
+        position: absolute;
+    }
+    .MainBodyAnimation__image-body {
+        height: 500px;
+        bottom: 0;
+        right: 0;
+    }
+    .MainBodyAnimation__image-hand {
+        height: 210px;
+        top: 182px;
+        left: 119px;
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        transform-origin: 100% 95%;
+        display: inline-block;
+    }
+}

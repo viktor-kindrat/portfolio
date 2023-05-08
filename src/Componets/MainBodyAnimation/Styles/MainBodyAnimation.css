@@ -1,0 +1,57 @@
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.MainBodyAnimation {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  transform-origin: 100% 100%;
+  transform: scale(90%);
+  -webkit-transform: scale(90%);
+  -moz-transform: scale(90%);
+  -ms-transform: scale(90%);
+  -o-transform: scale(90%);
+}
+.MainBodyAnimation .MainBodyAnimation__image {
+  position: absolute;
+}
+.MainBodyAnimation .MainBodyAnimation__image-body {
+  height: 500px;
+  bottom: 0;
+  right: 0;
+}
+.MainBodyAnimation .MainBodyAnimation__image-hand {
+  height: 210px;
+  top: 182px;
+  left: 119px;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 100% 95%;
+  display: inline-block;
+}
