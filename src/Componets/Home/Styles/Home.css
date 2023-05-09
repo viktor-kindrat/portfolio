@@ -1,8 +1,11 @@
 .Home {
   min-height: 300px;
+  height: min(100vh, 600px);
   width: 100%;
   padding: 0 150px;
   position: relative;
+  top: 50px;
+  z-index: 5;
 }
 .Home .Home__content {
   width: auto;
@@ -10,10 +13,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 30px;
 }
 .Home .Home__content .Home__headline {
+  max-width: 90%;
   height: min-content;
   display: flex;
   flex-direction: column;
@@ -21,4 +25,53 @@
   justify-content: flex-start;
   gap: 30px;
   line-height: 100%;
+}
+.Home .Home__content .Home__headline .Home__headline_small {
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(20px + 1.1vw);
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #080808;
+}
+.Home .Home__content .Home__headline .Home__typed-container {
+  height: calc((20px + 1.1vw) * 2.7);
+}
+.Home .Home__content .Home__headline .Home__typed-container .Home__headline_big {
+  font-family: "Arima Madurai", cursive;
+  font-weight: 900;
+  font-size: calc((20px + 1.1vw) * 2.7);
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #080808;
+}
+.Home .Home__content .Home__btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 35px 20px 27px;
+  gap: 10px;
+  background: #141414;
+  box-shadow: 0px 8px 30px rgba(20, 20, 20, 0.25);
+  border-radius: 5px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc((20px + 1.1vw) / 2);
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.Home .Home__content .Home__btn .Home__btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }

@@ -49,7 +49,7 @@ function Header() {
     }, [])
     return (
         <header className="Header">
-            <img src={logo} alt="VK" className="Header__logo" />
+            <img height="45" width="92" src={logo} alt="VK" className="Header__logo" />
             <nav className="Header__nav">
                 <ul className="Header__nav-list">
                     <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">About me</a></li>
