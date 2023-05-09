@@ -10,6 +10,13 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style>
+        @font-face {
+            font-family: "Raleway";
+            font-style: normal;
+            font-weight: 400;
+            src: url("./temp-fonts/Raleway-Regular.ttf");
+        }
+        
         .preloader-page {
             position: fixed;
             top: 0;
@@ -17,7 +24,7 @@
             width: 100%;
             height: 100vh;
             z-index: 1100;
-            background-color: #141414;
+            background-color: #050505;
             cursor: pointer;
             z-index: 10000;
         }
@@ -32,17 +39,94 @@
         }
         
         .preloader-page .loader__text {
+            height: calc(70px + 1vw);
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             font-size: calc(20px + 1vw);
             text-transform: uppercase;
-            letter-spacing: 5px;
-            font-weight: 700;
+            font-weight: 400;
             color: #fff;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: "Raleway", Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        
+        .preloader-page .loader__text::before {
+            content: "";
+            width: 0;
+            height: 3px;
+            background: #ffffff;
+            border-radius: 2px;
+            animation: blick1 3s ease-in-out infinite;
+            position: absolute;
+            top: 0;
+        }
+        
+        .preloader-page .loader__text::after {
+            content: "";
+            width: 0;
+            height: 3px;
+            background: #ffffff;
+            border-radius: 2px;
+            animation: blick2 3s ease-in-out infinite;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        @keyframes blick1 {
+            0% {
+                width: 0;
+                left: 0;
+            }
+            20% {
+                width: 100%;
+            }
+            50% {
+                width: 0;
+                left: 100%;
+            }
+            51% {
+                left: -100%;
+                width: 0;
+            }
+            70% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+                left: 0;
+            }
+        }
+        
+        @keyframes blick2 {
+            0% {
+                width: 0;
+                right: 0;
+            }
+            20% {
+                width: 100%;
+            }
+            50% {
+                width: 0;
+                right: 100%;
+            }
+            51% {
+                right: -100%;
+                width: 0;
+            }
+            70% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+                right: 0;
+            }
         }
         
         .preloader-page .loader__shape {
@@ -55,7 +139,7 @@
             height: 100vh;
             width: 100%;
             display: block;
-            fill: #141414;
+            fill: #050505;
         }
         
         @keyframes SpinAround {
@@ -76,27 +160,16 @@
     <div id="root"></div>
     <div class="preloader-page">
         <div class="loader__wrapper">
-            <p class="loader__text">Loading <span id="loader__span"></span></p>
+            <p class="loader__text">Makeing magic. Wait!</p>
         </div>
         <div class="loader__shape">
             <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800">
-          <path fill="#141414" d="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
+          <path d="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
         </svg>
         </div>
     </div>
     <script>
         let count = 0;
-        let loaderSpan = document.querySelector("#loader__span");
-        let x = setInterval(() => {
-            (count === 3) ? count = 0: count++
-                let i = 0;
-            let str = ""
-            while (i !== count) {
-                i++
-                str += "."
-            }
-            loaderSpan.innerText = str
-        }, 500)
         const LOADER = {};
         LOADER.intro = document.querySelector(".preloader-page");
         LOADER.path = LOADER.intro.querySelector("path");
@@ -116,10 +189,9 @@
                 scaleY: [0, 1.2],
                 d: LOADER.path.getAttribute("pathdata:id")
             });
-            clearInterval(x)
         };
         window.addEventListener("load", () => {
-            setTimeout(svgAnimation, 1500);
+            setTimeout(svgAnimation, 2000);
         })
     </script>
 </body>
