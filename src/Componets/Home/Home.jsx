@@ -22,7 +22,7 @@ function Home() {
         <section className="Home">
             <div className="Home__content">
                 <h1 className="Home__headline">
-                    <span className="Home__headline_small">Welcome to the page of</span> <br />
+                    <span className="Home__headline_small">Welcome to the page of</span>
                     <span className="Home__typed-container">
                         <span ref={typedEl} className="Home__headline_big">Web developer</span>
                     </span>
