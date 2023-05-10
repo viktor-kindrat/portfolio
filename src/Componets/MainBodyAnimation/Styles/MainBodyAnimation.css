@@ -66,3 +66,8 @@
     bottom: 20%;
   }
 }
+@media screen and (max-width: 640px) {
+  .MainBodyAnimation {
+    display: none;
+  }
+}

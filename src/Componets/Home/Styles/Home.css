@@ -103,3 +103,20 @@
     padding: 0 25px;
   }
 }
+@media screen and (max-width: 600px) {
+  .Home .Home__content {
+    align-items: center;
+    justify-content: center;
+  }
+  .Home .Home__content .Home__headline {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .Home .Home__content .Home__headline * {
+    max-width: 100%;
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+}
