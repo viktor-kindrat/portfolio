@@ -60,3 +60,10 @@
         display: inline-block;
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .MainBodyAnimation {
+        @include scale(60%);
+        bottom: 20%;
+    }
+}

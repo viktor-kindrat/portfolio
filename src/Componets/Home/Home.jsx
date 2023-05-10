@@ -27,7 +27,7 @@ function Home() {
                 <h1 className="Home__headline">
                     <span className="Home__headline_small">Welcome to the page of</span>
                     <span className="Home__typed-container">
-                        <span ref={typedEl} className="Home__headline_big">Web developer</span>
+                        <span ref={typedEl} className="Home__headline_big">Viktor Kindtat</span>
                     </span>
                 </h1>
                 <a className="Home__btn" href={CV} download="CV"> <img height="24" width="24" src={dldSvg} alt="download" className="Home__btn-icon" /> download cv</a>

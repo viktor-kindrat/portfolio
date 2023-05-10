@@ -37,7 +37,7 @@
   color: #080808;
 }
 .Home .Home__content .Home__headline .Home__typed-container {
-  height: calc((20px + 1.1vw) * 2.7);
+  min-height: calc((20px + 1.1vw) * 2.7);
 }
 .Home .Home__content .Home__headline .Home__typed-container .Home__headline_big {
   font-family: "Arima Madurai", cursive;
@@ -74,4 +74,32 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 1100px) {
+  .Home {
+    padding: 0 50px;
+  }
+  .Home .Home__content .Home__headline .Home__headline_small {
+    font-size: calc(10px + 1.1vw);
+  }
+  .Home .Home__content .Home__headline .Home__typed-container {
+    min-height: calc((10px + 1.1vw) * 2.7);
+  }
+  .Home .Home__content .Home__headline .Home__typed-container .Home__headline_big {
+    font-size: calc((10px + 1.1vw) * 2.7);
+  }
+  .Home .Home__content .Home__btn {
+    font-size: calc((10px + 1.1vw) / 2);
+    padding: 10px 15px;
+  }
+  .Home .Home__content .Home__btn .Home__btn-icon {
+    height: 16px;
+    width: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .Home {
+    padding: 0 25px;
+  }
 }
