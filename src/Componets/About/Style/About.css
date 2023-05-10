@@ -1,3 +1,16 @@
 .About {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: scroll;
+}
+.About .About__content {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.About .About__content:nth-child(2n) {
+  background: gray;
 }
