@@ -28,7 +28,7 @@
   width: 500px;
   height: 500px;
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   right: -100%;
   transform-origin: 100% 100%;
   transform: scale(90%);
