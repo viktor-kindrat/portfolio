@@ -84,13 +84,13 @@
     font-size: calc(10px + 1.1vw);
   }
   .Home .Home__content .Home__headline .Home__typed-container {
-    min-height: calc((10px + 1.1vw) * 2.7);
+    min-height: 20px;
   }
   .Home .Home__content .Home__headline .Home__typed-container .Home__headline_big {
-    font-size: calc((10px + 1.1vw) * 2.7);
+    font-size: 40px;
   }
   .Home .Home__content .Home__btn {
-    font-size: calc((10px + 1.1vw) / 2);
+    font-size: 13px;
     padding: 10px 15px;
   }
   .Home .Home__content .Home__btn .Home__btn-icon {
