@@ -33,28 +33,28 @@ function Header() {
                     .to(`.Header__nav-dot_2`, { duration: 0.2, opacity: 1 })
                     .set(`.Header__nav-switcher`, { justifyContent: "space-between" })
             }
-            tl.then(()=>playing.current = false)
+            tl.then(() => playing.current = false)
         }
     }, [openMenu])
 
-    let menuMosueEnter = useCallback(function(e){
+    let menuMosueEnter = useCallback(function (e) {
         let targets = document.querySelectorAll(`.${e.target.classList[0]}`);
-        targets.forEach(tar=>tar.classList.add(`${e.target.classList[0]}_opacity-low`))
+        targets.forEach(tar => tar.classList.add(`${e.target.classList[0]}_opacity-low`))
         e.target.classList.remove(`${e.target.classList[0]}_opacity-low`)
     }, [])
 
-    let menuMouseLeave = useCallback(function(e){
+    let menuMouseLeave = useCallback(function (e) {
         let targets = document.querySelectorAll(`.${e.target.classList[0]}`);
-        targets.forEach(tar=>tar.classList.remove(`${e.target.classList[0]}_opacity-low`))
+        targets.forEach(tar => tar.classList.remove(`${e.target.classList[0]}_opacity-low`))
     }, [])
 
-    let menuClickHandler = useCallback(function(e){
+    let menuClickHandler = useCallback(function (e) {
         e.preventDefault()
         let id = `#${e.target.innerText.split(" ")[0].toLowerCase()}`;
         let navElement = document.querySelector(id);
-        if (navElement) navElement.scrollIntoView({behavior: "smooth", block:"start"})
+        if (navElement) navElement.scrollIntoView({ behavior: "smooth", block: "start" })
         return false
-    })
+    }, [])
     return (
         <header className="Header">
             <img height="45" width="92" src={logo} alt="VK" className="Header__logo" />

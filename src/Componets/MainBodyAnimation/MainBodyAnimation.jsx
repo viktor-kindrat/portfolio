@@ -2,8 +2,8 @@ import { gsap } from "gsap";
 import { useEffect } from "react";
 import "./Styles/MainBodyAnimation.css"
 
-import hand from "./Images/hand.png"
-import body from "./Images/man.png"
+import hand from "./Images/hand.webp"
+import body from "./Images/man.webp"
 
 function MainBodyAnimation(){
     useEffect(()=>{
