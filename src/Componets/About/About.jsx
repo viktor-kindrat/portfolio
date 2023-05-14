@@ -72,7 +72,6 @@ function About() {
                 </div>
             </section>
             <div className="AboutPlaceHolder" style={{ display: "none", "height": data.length * 100 + "vh", "width": 100 + "%" }}></div>
-            <div className="Testbo" style={{ "height": 150 + "vh", "width": 100 + "%" }}>Aliqua voluptate commodo sunt ex aute culpa minim. Qui do dolor tempor eiusmod aliqua elit adipisicing ut magna aliquip sit incididunt dolor. Enim ipsum esse laborum laboris elit culpa dolor voluptate elit ea sunt. Amet id duis quis id velit exercitation. Esse enim sunt proident qui excepteur.</div>
         </>
     )
 }
