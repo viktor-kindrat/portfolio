@@ -58,7 +58,7 @@ function About() {
     }, [sliderIndex])
     return (
         <>
-            <section className="About">
+            <section className="About" id="about">
                 <div className="About__content">
                     <div className="About__content-wrap">
                         <h2 className="About__headline">My story</h2>

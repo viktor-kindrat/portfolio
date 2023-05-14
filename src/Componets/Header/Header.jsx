@@ -47,15 +47,23 @@ function Header() {
         let targets = document.querySelectorAll(`.${e.target.classList[0]}`);
         targets.forEach(tar=>tar.classList.remove(`${e.target.classList[0]}_opacity-low`))
     }, [])
+
+    let menuClickHandler = useCallback(function(e){
+        e.preventDefault()
+        let id = `#${e.target.innerText.split(" ")[0].toLowerCase()}`;
+        let navElement = document.querySelector(id);
+        if (navElement) navElement.scrollIntoView({behavior: "smooth", block:"start"})
+        return false
+    })
     return (
         <header className="Header">
             <img height="45" width="92" src={logo} alt="VK" className="Header__logo" />
             <nav className="Header__nav">
                 <ul className="Header__nav-list">
-                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">About me</a></li>
-                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">SkilLs and certifications</a></li>
-                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">Projects</a></li>
-                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a href="/" className="Header__link">Get in touch</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a onClick={menuClickHandler} href="/" className="Header__link">About me</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a onClick={menuClickHandler} href="/" className="Header__link">SkilLs and certifications</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a onClick={menuClickHandler} href="/" className="Header__link">Projects</a></li>
+                    <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a onClick={menuClickHandler} href="/" className="Header__link">Get in touch</a></li>
                 </ul>
             </nav>
             <button onClick={mobileMenuHandler} type="button" className="Header__nav-switcher">
