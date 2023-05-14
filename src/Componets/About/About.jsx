@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
+import { gsap } from "gsap"
 
 import "./Style/About.css"
+
 import image1 from "./Images/1.png"
 import image2 from "./Images/2.png"
 let data = [{
@@ -13,7 +15,7 @@ let data = [{
 
 function About() {
     let [sliderIndex, setSliderIndex] = useState(0)
-    useEffect(()=>{
+    useEffect(() => {
         let root = document.querySelector("html");
         let firstPage = document.querySelector(".Home");
         let thisPage = document.querySelector(".About");
@@ -21,7 +23,7 @@ function About() {
 
         let screenHeight = root.clientHeight;
         let disableScrollCoordinate = Math.floor(thisPage.offsetTop + parseFloat(getComputedStyle(thisPage).height.slice(0, getComputedStyle(firstPage).height.indexOf("px"))) + screenHeight * (data.length - 1));
-        let scrollHandler = (e)=>{
+        let scrollHandler = (e) => {
             let firstPageHeight = Math.floor(parseFloat(getComputedStyle(firstPage).height.slice(0, getComputedStyle(firstPage).height.indexOf("px"))))
             let scrollTop = Math.floor(root.scrollTop);
 
@@ -31,8 +33,12 @@ function About() {
                 thisPage.setAttribute("style", "position: fixed; top:0; left: 0; transition: 0.3s;");
                 placeHolder.style.display = "block"
                 if (scrollTop > firstPageHeight + 150 && sliderIndex === 0) {
+                    let tl = gsap.timeline();
+                    tl.to(".About__content-inner", { opacity: 0, duration: 0.2, ease: "power2.out" })
                     setSliderIndex(1)
-                } else if(scrollTop < firstPageHeight + 150 && sliderIndex === 1){
+                } else if (scrollTop < firstPageHeight + 150 && sliderIndex === 1) {
+                    let tl = gsap.timeline();
+                    tl.to(".About__content-inner", { opacity: 0, duration: 0.2, ease: "power2.out" })
                     setSliderIndex(0)
                 }
             } else if (scrollTop > disableScrollCoordinate || scrollTop <= firstPageHeight) {
@@ -41,9 +47,14 @@ function About() {
             }
         }
         window.addEventListener("scroll", scrollHandler)
-        return ()=>{
+        return () => {
             window.removeEventListener("scroll", scrollHandler)
         }
+    }, [sliderIndex])
+    useEffect(() => {
+        let tl = gsap.timeline();
+        tl.set(".About__content-inner", { opacity: 0, y: 25 })
+        tl.to(".About__content-inner", { opacity: 1, y: 0, duration: 0.5, ease: "power2.in" })
     }, [sliderIndex])
     return (
         <>
@@ -60,7 +71,7 @@ function About() {
                     </div>
                 </div>
             </section>
-            <div className="AboutPlaceHolder" style={{ display:"none", "height": data.length * 100 + "vh", "width": 100 + "%" }}></div>
+            <div className="AboutPlaceHolder" style={{ display: "none", "height": data.length * 100 + "vh", "width": 100 + "%" }}></div>
             <div className="Testbo" style={{ "height": 150 + "vh", "width": 100 + "%" }}>Aliqua voluptate commodo sunt ex aute culpa minim. Qui do dolor tempor eiusmod aliqua elit adipisicing ut magna aliquip sit incididunt dolor. Enim ipsum esse laborum laboris elit culpa dolor voluptate elit ea sunt. Amet id duis quis id velit exercitation. Esse enim sunt proident qui excepteur.</div>
         </>
     )
