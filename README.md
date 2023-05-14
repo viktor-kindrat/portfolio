@@ -1,6 +1,6 @@
 # Portfolio (in development)
 
-This is the personal portfolio website of Viktor Kindrat. The website showcases some of Viktor's projects and provides information about his skills and experience.
+This is my personal portfolio website. The website showcases some of my projects and provides information about his skills and experience.
 
 ## Table of Contents
 
