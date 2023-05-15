@@ -20,6 +20,7 @@ function About() {
         let firstPage = document.querySelector(".Home");
         let thisPage = document.querySelector(".About");
         let placeHolder = document.querySelector(".AboutPlaceHolder")
+        let placeHolderPre = document.querySelector(".AboutPlaceHolder_pre")
 
         let screenHeight = root.clientHeight;
         let disableScrollCoordinate = Math.floor(thisPage.offsetTop + parseFloat(getComputedStyle(thisPage).height.slice(0, getComputedStyle(firstPage).height.indexOf("px"))) + screenHeight * (data.length - 1));
@@ -27,11 +28,12 @@ function About() {
             let firstPageHeight = Math.floor(parseFloat(getComputedStyle(firstPage).height.slice(0, getComputedStyle(firstPage).height.indexOf("px"))))
             let scrollTop = Math.floor(root.scrollTop);
 
-            console.log(`scroll top is: ${scrollTop}\ndisableScrollCordinate is: ${disableScrollCoordinate}\nindex is: ${sliderIndex}`)
+            console.log(`scroll top is: ${scrollTop}\ndisableScrollCordinate is: ${disableScrollCoordinate - screenHeight - 50}\nindex is: ${sliderIndex}`)
 
             if (scrollTop >= firstPageHeight && scrollTop <= disableScrollCoordinate) {
                 thisPage.setAttribute("style", "position: fixed; top:0; left: 0; transition: 0.3s;");
                 placeHolder.style.display = "block"
+                placeHolderPre.style.display = "none"
                 if (scrollTop > firstPageHeight + 150 && sliderIndex === 0) {
                     let tl = gsap.timeline();
                     tl.to(".About__content-inner", { opacity: 0, duration: 0.2, ease: "power2.out" })
@@ -44,6 +46,11 @@ function About() {
             } else if (scrollTop > disableScrollCoordinate || scrollTop <= firstPageHeight) {
                 thisPage.setAttribute("style", "position: relative; top:0; left: 0; transition: 0.3s;")
                 placeHolder.style.display = "none"
+                if (scrollTop <= firstPageHeight) {
+                    placeHolderPre.style.display = "none"
+                } else {
+                    placeHolderPre.style.display = "block"
+                }
             }
         }
         window.addEventListener("scroll", scrollHandler)
@@ -58,6 +65,7 @@ function About() {
     }, [sliderIndex])
     return (
         <>
+            <div className="AboutPlaceHolder_pre" style={{ display: "none", "height": ((data.length - 1) * 100) + "vh", "width": 100 + "%" }}></div>
             <section className="About" id="about">
                 <div className="About__content">
                     <div className="About__content-wrap">
