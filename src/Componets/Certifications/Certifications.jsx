@@ -18,7 +18,7 @@ function Certifications (){
         <section className="Certifications">
             <h2 className="Certifications__headline">Certifications</h2>
             {
-                (certificates.current) ? certificates.current.map(el =>
+                (certificates.current && !pending) ? certificates.current.map(el =>
                     <div>{el["_doc"].name} <br /> <img height={300} src={`data:${el["_doc"].image.contentType};base64,${el["_doc"].image.data}`} alt="certificate" /></div>
                 ) : ""
             }
