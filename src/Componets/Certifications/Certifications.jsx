@@ -56,6 +56,7 @@ function Certifications() {
         }
 
         return () => {
+            // eslint-disable-next-line
             observer.unobserve(swiper.current);
         };
     }, []);
