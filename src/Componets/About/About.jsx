@@ -28,7 +28,7 @@ function About() {
             let firstPageHeight = Math.floor(parseFloat(getComputedStyle(firstPage).height.slice(0, getComputedStyle(firstPage).height.indexOf("px"))))
             let scrollTop = Math.floor(root.scrollTop);
 
-            console.log(`scroll top is: ${scrollTop}\ndisableScrollCordinate is: ${disableScrollCoordinate - screenHeight - 50}\nindex is: ${sliderIndex}`)
+            // console.log(`scroll top is: ${scrollTop}\ndisableScrollCordinate is: ${disableScrollCoordinate - screenHeight - 50}\nindex is: ${sliderIndex}`)
 
             if (scrollTop >= firstPageHeight && scrollTop <= disableScrollCoordinate) {
                 thisPage.setAttribute("style", "position: fixed; top:0; left: 0; transition: 0.3s;");
