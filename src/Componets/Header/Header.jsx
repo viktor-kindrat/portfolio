@@ -66,7 +66,7 @@ function Header() {
                     <li onMouseEnter={menuMosueEnter} onMouseLeave={menuMouseLeave} className="Header__nav-item"><a onClick={menuClickHandler} href="/" className="Header__link">Get in touch</a></li>
                 </ul>
             </nav>
-            <button onClick={mobileMenuHandler} type="button" className="Header__nav-switcher">
+            <button aria-label="menu" onClick={mobileMenuHandler} type="button" className="Header__nav-switcher">
                 <span className="Header__nav-dot Header__nav-dot_1"></span>
                 <span className="Header__nav-dot Header__nav-dot_2"></span>
                 <span className="Header__nav-dot Header__nav-dot_3"></span>
