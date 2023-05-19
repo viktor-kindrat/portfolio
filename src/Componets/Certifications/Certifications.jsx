@@ -18,7 +18,7 @@ function Certifications() {
             })
     }, [])
 
-    
+
 
     return (
         <section id="skills" className="Certifications">
@@ -33,14 +33,11 @@ function Certifications() {
                     space-between="35"
                 >
                     {
-                        (certificates.current && !pending) ? certificates.current.map(el => {
-                            console.log(el._doc)
-                            return (
-                                <swiper-slide key={el._doc._id} style={{ width: (window.innerWidth > 650) ? "350px" : "100%", display: "flex", justifyContent: "center" }}>
-                                    <CertificationsCard swiperRef={swiper.current} data={el._doc}/>
-                                </swiper-slide>
-                            )
-                        }) : ""
+                        (certificates.current && !pending) ? certificates.current.map(el =>
+                            <swiper-slide key={el._doc._id} style={{ width: (window.innerWidth > 650) ? "350px" : "100%", display: "flex", justifyContent: "center" }}>
+                                <CertificationsCard swiperRef={swiper.current} data={el._doc} />
+                            </swiper-slide>
+                        ) : ""
                     }
                 </swiper-container>
             </div>
