@@ -14,7 +14,6 @@ function Skills (){
         fetch("https://portfolio-api-5x6x.onrender.com/db/getSkills")
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 skillsData.current = data;
                 setPanding(false)
             })
@@ -26,7 +25,7 @@ function Skills (){
                 <swiper-container style={{ overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} slides-per-view="auto" space-between="25">
                     {
                         (skillsData.current && !pending) ? skillsData.current.map((item)=>
-                            <swiper-slide style={{width: "min-content", display: "flex", justifyContent: "center"}}>
+                            <swiper-slide key={item._doc._id} style={{width: "min-content", display: "flex", justifyContent: "center"}}>
                                 <SkillsCard swiperRef={skillsSwiper.current} data={item._doc}/>
                             </swiper-slide>
                         ) : <Loader/>

@@ -2,28 +2,28 @@ import "./Styles/Loader.css"
 
 function Loader() {
     return (
-        <div class="container">
-            <div class="line"></div>
-            <div class="loader">
-                <div class="one-loader first">
-                    <div class="v-line first-line"></div>
-                    <div class="circle first-circle"></div>
+        <div className="container">
+            <div className="line"></div>
+            <div className="loader">
+                <div className="one-loader first">
+                    <div className="v-line first-line"></div>
+                    <div className="circle first-circle"></div>
                 </div>
-                <div class="one-loader">
-                    <div class="v-line middle-line"></div>
-                    <div class="circle middle-circle"></div>
+                <div className="one-loader">
+                    <div className="v-line middle-line"></div>
+                    <div className="circle middle-circle"></div>
                 </div>
-                <div class="one-loader">
-                    <div class="v-line middle-line"></div>
-                    <div class="circle middle-circle"></div>
+                <div className="one-loader">
+                    <div className="v-line middle-line"></div>
+                    <div className="circle middle-circle"></div>
                 </div>
-                <div class="one-loader">
-                    <div class="v-line middle-line"></div>
-                    <div class="circle middle-circle"></div>
+                <div className="one-loader">
+                    <div className="v-line middle-line"></div>
+                    <div className="circle middle-circle"></div>
                 </div>
-                <div class="one-loader last">
-                    <div class="v-line last-line"></div>
-                    <div class="circle last-circle"></div>
+                <div className="one-loader last">
+                    <div className="v-line last-line"></div>
+                    <div className="circle last-circle"></div>
                 </div>
             </div>
             <h1>Loading</h1>
