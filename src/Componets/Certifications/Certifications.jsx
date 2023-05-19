@@ -32,7 +32,7 @@ function Certifications() {
                         opacity: 1,
                         y: 0,
                         duration: 0.6,
-                        stagger: 0.3,
+                        stagger: 0.2,
                         delay: 0.3
                     });
                     console.log('Swiper is visible');
@@ -77,21 +77,13 @@ function Certifications() {
                         (certificates.current && !pending) ? certificates.current.map(el => {
                             console.log(el._doc)
                             return (
-                                <swiper-slide style={{ width: (document.querySelector(".Certifications__slider__slide")) ? getComputedStyle(document.querySelector(".Certifications__slider__slide")).width : "350px" }}>
+                                <swiper-slide key={el._doc._id} style={{ width: (window.innerWidth > 650) ? "350px" : "100%", display:"flex", justifyContent: "center" }}>
                                     <div className="Certifications__slider__slide">
                                         <img className="Certifications__slider-image" height={150} src={`data:${el["_doc"].image.contentType};base64,${el["_doc"].image.data}`} alt="certificate-thumbnail" />
                                         <div className="Certifications__slider-content-textgroup">
                                             <h6 className="Certifications__slider-content-headline">{el["_doc"].name}</h6>
                                             <p className="Certifications__slider-content-info">{el._doc.academy}</p>
                                             <p className="Certifications__slider-content-info">{el._doc.dated}</p>
-                                            {/* ╭━┳━╭━╭━╮╮
-                                                    ┃┈┈┈┣▅╋▅┫┃
-                                                    ┃┈┃┈╰━╰━━━━━━╮
-                                                    ╰┳╯┈┈┈┈┈┈┈┈┈◢▉◣
-                                                    ╲┃┈┈┈┈┈┈┈┈┈▉▉▉
-                                                    ╲┃┈┈┈┈┈┈┈┈┈◥▉◤
-                                                    ╲┃┈┈┈┈╭━┳━━━━╯
-                                                    ╲┣━━━━━━┫﻿*/}
                                             <a href={`data:${el["_doc"].image.contentType};base64,${el["_doc"].image.data}`} className="Certifications__slider-content-btn" download={"Certificate " + el._doc.name}><img className="Certifications__slider-content-img" height={15} src={dldSvg} alt="download" /> Download</a>
                                         </div>
                                     </div>
@@ -101,7 +93,6 @@ function Certifications() {
                     }
                 </swiper-container>
             </div>
-            <div style={{ height: "200vh" }}></div>
         </section>
     )
 }
