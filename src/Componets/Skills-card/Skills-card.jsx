@@ -12,7 +12,7 @@ function SkillsCard (props){
                     tl.fromTo(".Skills-card", {
                         opacity: 0, y: 50,
                     }, {
-                        opacity: 1, y: 0, duration: 0.6, stagger: 0.2, delay: 0.3
+                        opacity: 1, y: 0, duration: 0.6, stagger: 0.1, delay: 0.3
                     });
                 } else {
                     tl.fromTo(".Skills-card", {
