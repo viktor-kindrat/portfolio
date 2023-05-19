@@ -18,7 +18,7 @@ function Certifications() {
             })
     }, [])
     return (
-        <section id="skills" className="Certifications">
+        <section className="Certifications">
             <h2 className="Certifications__headline">Certifications</h2>
             <div className="Certifications__slider-container" id="Certifications-swiper-parent" ref={swiper}>
                 <swiper-container style={{ overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} direction="horizontal" navigation="false" slides-per-view="auto" center-insufficient-slides="true" space-between="35">

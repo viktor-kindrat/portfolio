@@ -1,0 +1,37 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 150px;
+    gap: 130px;
+    isolation: isolate;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #141414;
+    color: #ffffff;
+    .Footer__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 130px;
+        z-index: 1;
+    }
+    .Footer__img {
+        height: 75%;
+        width: auto;
+        z-index: 0;
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+        object-fit: contain;
+        object-position: center 0%;
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+    }
+}

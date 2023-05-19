@@ -19,7 +19,7 @@ function Skills (){
             })
     }, [])
     return (
-        <section className="Skills">
+        <section id="skills" className="Skills">
             <h2 className="Skills__headline">Skills</h2>
             <div ref={skillsSwiper} className="Skills__swiper-container">
                 <swiper-container style={{ overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} slides-per-view="auto" space-between="25">
