@@ -2,10 +2,12 @@
     font-family: "Raleway";
     font-style: normal;
     src: url("./Raleway-VariableFont_wght.ttf");
+    font-display: block;
 }
 
 @font-face {
     font-family: "Raleway";
     font-style: italic;
     src: url("./Raleway-Italic-VariableFont_wght.ttf");
+    font-display: block;
 }
