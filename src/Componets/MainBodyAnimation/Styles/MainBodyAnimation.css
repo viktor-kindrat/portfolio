@@ -29,7 +29,7 @@
   height: 500px;
   position: absolute;
   bottom: 50px;
-  right: -100%;
+  right: -5px;
   transform-origin: 100% 100%;
   transform: scale(90%);
   -webkit-transform: scale(90%);

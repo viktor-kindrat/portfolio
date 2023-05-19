@@ -8,15 +8,22 @@ import body from "./Images/man.webp"
 function MainBodyAnimation(){
     useEffect(()=>{
         let setTl = () => {
+            gsap.set(".MainBodyAnimation", {
+                x: 1000,
+                opacity: 0
+            })
             setTimeout(() => {
                 let tl = gsap.timeline();
                 tl.fromTo(".MainBodyAnimation", {
-                    right: "-100%"
+                    x: 1000,
+                    opacity: 0
                 }, {
-                    right: "-5px",
-                    duration: 0.6
+                    x: 5,
+                    opacity: 1,
+                    duration: 0.6,
+                    delay: 0.9
                 })
-            }, 2800);
+            }, 3000);
         }
         window.addEventListener("load", setTl());
         return (

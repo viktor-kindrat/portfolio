@@ -13,17 +13,18 @@ function Home() {
         const setTl = ()=>{
             let tl = gsap.timeline()
             tl.set(".Home__move-content", {
-                xPercent: -100,
+                x: -100,
                 opacity: 0,
             })
             setTimeout(() => {
                 tl.to(".Home__move-content", {
-                    xPercent: 0,
+                    x: 0,
                     opacity: 1,
                     duration: 0.5,
-                    stagger: 0.3
+                    stagger: 0.3,
+                    delay: 0.3
                 })
-            }, 2800);
+            }, 3000);
         }
         const typed = new Typed(typedEl.current, {
             strings: ['Viktor Kindtat', 'Web developer', 'Web designer', 'Coding fan'],
