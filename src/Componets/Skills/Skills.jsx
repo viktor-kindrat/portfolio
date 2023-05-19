@@ -22,7 +22,7 @@ function Skills (){
         <section className="Skills">
             <h2 className="Skills__headline">Skills</h2>
             <div ref={skillsSwiper} className="Skills__swiper-container">
-                <swiper-container  style={{overflow: "visible"}} slides-per-view="auto" space-between="25">
+                <swiper-container style={{ overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} slides-per-view="auto" space-between="25">
                     {
                         (skillsData.current && !pending) ? skillsData.current.map((item)=>
                             <swiper-slide style={{width: "min-content", display: "flex", justifyContent: "center"}}>

@@ -80,3 +80,9 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .Certifications-card {
+        width: calc(100vw - 50px);
+    }
+}
