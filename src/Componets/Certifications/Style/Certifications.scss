@@ -23,6 +23,7 @@
         height: auto;
         width: 100%;
         overflow: visible;
+        position: relative;
         &:only-child {
             overflow: visible;
         }

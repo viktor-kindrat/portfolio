@@ -3,6 +3,7 @@ import { register } from 'swiper/element/bundle';
 
 import "./Style/Certifications.css"
 import CertificationsCard from "../Certifications-card/Certifications-card"
+import Loader from "../Loader/Loader"
 
 register();
 function Certifications() {
@@ -27,7 +28,7 @@ function Certifications() {
                             <swiper-slide key={el._doc._id} style={{ width: "min-content", display: "flex", justifyContent: "center" }}>
                                 <CertificationsCard swiperRef={swiper.current} data={el._doc} />
                             </swiper-slide>
-                        ) : ""
+                        ) : <Loader/>
                     }
                 </swiper-container>
             </div>

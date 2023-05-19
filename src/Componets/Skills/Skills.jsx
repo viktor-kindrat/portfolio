@@ -3,6 +3,7 @@ import { register } from 'swiper/element/bundle';
 
 import "./Styles/Skills.css"
 import SkillsCard from "../Skills-card/Skills-card"
+import Loader from "../Loader/Loader";
 
 register()
 function Skills (){
@@ -28,7 +29,7 @@ function Skills (){
                             <swiper-slide style={{width: "min-content", display: "flex", justifyContent: "center"}}>
                                 <SkillsCard swiperRef={skillsSwiper.current} data={item._doc}/>
                             </swiper-slide>
-                        ) : ""
+                        ) : <Loader/>
                     }
                 </swiper-container>
             </div>

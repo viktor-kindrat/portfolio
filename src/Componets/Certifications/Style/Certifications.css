@@ -24,6 +24,7 @@
   height: auto;
   width: 100%;
   overflow: visible;
+  position: relative;
 }
 .Certifications .Certifications__slider-container:only-child {
   overflow: visible;
