@@ -5,6 +5,7 @@
     font-style: normal;
     font-weight: 400;
     src: local('Arima Madurai Regular'), url('ArimaMadurai-Regular.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
     font-style: normal;
     font-weight: 300;
     src: local('Arima Madurai Thin'), url('ArimaMadurai-Thin.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -19,6 +21,7 @@
     font-style: normal;
     font-weight: 100;
     src: local('Arima Madurai ExtraLight'), url('ArimaMadurai-ExtraLight.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -26,6 +29,7 @@
     font-style: normal;
     font-weight: 200;
     src: local('Arima Madurai Light'), url('ArimaMadurai-Light.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -33,6 +37,7 @@
     font-style: normal;
     font-weight: 500;
     src: local('Arima Madurai Medium'), url('ArimaMadurai-Medium.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -40,6 +45,7 @@
     font-style: normal;
     font-weight: 600;
     src: local('Arima Madurai Bold'), url('ArimaMadurai-Bold.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -47,6 +53,7 @@
     font-style: normal;
     font-weight: 700;
     src: local('Arima Madurai ExtraBold'), url('ArimaMadurai-ExtraBold.woff') format('woff');
+    font-display: block;
 }
 
 @font-face {
@@ -54,4 +61,5 @@
     font-style: normal;
     font-weight: 900;
     src: local('Arima Madurai Black'), url('ArimaMadurai-Black.woff') format('woff');
+    font-display: block;
 }
