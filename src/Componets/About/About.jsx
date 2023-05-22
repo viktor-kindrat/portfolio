@@ -36,11 +36,13 @@ function About() {
                 placeHolderPre.style.display = "none"
                 if (scrollTop > firstPageHeight + 150 && sliderIndex === 0) {
                     let tl = gsap.timeline();
-                    tl.to(".About__content-inner", { opacity: 0, duration: 0.2, ease: "power2.out" })
+                    tl.to(".About__image", { opacity: 0, xPercent: -200, duration: 0.3, ease: "circ.inOut" })
+                    tl.to(".About__text", { opacity: 0, xPercent: 200, duration: 0.3, ease: "circ.inOut" })
                     setSliderIndex(1)
                 } else if (scrollTop < firstPageHeight + 150 && sliderIndex === 1) {
                     let tl = gsap.timeline();
-                    tl.to(".About__content-inner", { opacity: 0, duration: 0.2, ease: "power2.out" })
+                    tl.to(".About__image", { opacity: 0, xPercent: -200, duration: 0.3, ease: "circ.inOut" })
+                    tl.to(".About__text", { opacity: 0, xPercent: 200, duration: 0.3, ease: "circ.inOut" })
                     setSliderIndex(0)
                 }
             } else if (scrollTop > disableScrollCoordinate || scrollTop <= firstPageHeight) {
@@ -60,8 +62,15 @@ function About() {
     }, [sliderIndex])
     useEffect(() => {
         let tl = gsap.timeline();
-        tl.set(".About__content-inner", { opacity: 0, y: 25 })
-        tl.to(".About__content-inner", { opacity: 1, y: 0, duration: 0.5, ease: "power2.in" })
+        // tl.set(".About__content-inner", { opacity: 0, y: 25 })
+        // tl.to(".About__content-inner", { opacity: 1, y: 0, duration: 0.5, ease: "power2.in" })
+
+        tl.set(".About__image", { opacity: 0, xPercent: -200 })
+        tl.set(".About__text", { opacity: 0, xPercent: 200 })
+        tl.then(() => {
+            gsap.to(".About__image", { opacity: 1, xPercent: 0, duration: 0.6, ease: "circ.inOut" })
+            gsap.to(".About__text", { opacity: 1, xPercent: 0, duration: 0.6, ease: "circ.inOut" })
+        })
     }, [sliderIndex])
     return (
         <>
@@ -75,6 +84,18 @@ function About() {
                             <p className="About__text">
                                 {data[sliderIndex].text}
                             </p>
+                        </div>
+                        <div className="About__progress-bar-container">
+                            {/* this is {((sliderIndex + 1) / data.length ) * 100}% here */}
+                            <div className="About__progress-bar">
+                                <div className="About__progress-bar-value-text">{((sliderIndex + 1) / data.length) * 100}%</div>
+                                <div className="About__progress-bar-value">
+                                    <div style={{ width: `${((sliderIndex + 1) / data.length) * 100}%` }} className="About__progress-bar-value-block"></div>
+                                </div>
+                            </div>
+                            <div className="About__progress-hint">
+                                scroll down
+                            </div>
                         </div>
                     </div>
                 </div>

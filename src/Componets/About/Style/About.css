@@ -1,3 +1,14 @@
+@keyframes opacityChange {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .About {
   height: 100vh;
   width: 100vw;
@@ -13,6 +24,61 @@
   justify-content: center;
   overflow: hidden;
   background: #ffffff;
+}
+.About .About__content .About__progress-bar-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 25px;
+  padding: 0 150px;
+  right: 0;
+}
+.About .About__content .About__progress-bar-container .About__progress-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.About .About__content .About__progress-bar-container .About__progress-bar .About__progress-bar-value-text {
+  color: rgba(20, 20, 20, 0.5333333333);
+  font-size: 14px;
+  font-weight: 400;
+}
+.About .About__content .About__progress-bar-container .About__progress-bar .About__progress-bar-value {
+  width: 100%;
+  height: 5px;
+  background: #eeeeee;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.About .About__content .About__progress-bar-container .About__progress-bar .About__progress-bar-value .About__progress-bar-value-block {
+  height: 100%;
+  background: #b8b8b8;
+  transition: width 0.4s ease;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transition: width 0.4s ease;
+  -moz-transition: width 0.4s ease;
+  -ms-transition: width 0.4s ease;
+  -o-transition: width 0.4s ease;
+}
+.About .About__content .About__progress-bar-container .About__progress-hint {
+  color: rgba(20, 20, 20, 0.5333333333);
+  font-size: 14px;
+  font-weight: 400;
+  animation: opacityChange 1.5s infinite ease-in-out;
+  -webkit-animation: opacityChange 1.5s infinite ease-in-out;
 }
 .About .About__content .About__content-inner {
   width: 100%;
