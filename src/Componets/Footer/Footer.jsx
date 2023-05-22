@@ -1,4 +1,5 @@
-import { useCallback } from "react"
+import { useCallback, useEffect } from "react"
+import { gsap } from "gsap"
 
 import "./Styles/Footer.css"
 
@@ -12,6 +13,27 @@ import instagramIcon from "./Images/instagram.svg"
 import linkedinIcon from "./Images/linkedin.svg"
 
 function Footer() {
+    useEffect(() => {
+        let linksEl = document.querySelector(".Footer__links");
+        let observer = new IntersectionObserver(entries => {
+            let tl = gsap.timeline();
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log("observing inspects");
+                    tl.fromTo(".Footer__headline", {opacity: 0, x: -50}, {opacity: 1, x: 0, duration: 0.3, stagger: 0.05})
+                    tl.fromTo(".Footer__links-list-item", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.05 })
+                } else {
+                    console.log("observing not inspects");
+                    tl.fromTo(".Footer__links-list-item", { opacity: 1, x: 0, }, { opacity: 0, x: 50, duration: 0.1, stagger: 0.05 })
+                    tl.fromTo(".Footer__headline", {opacity: 1, x: 0}, {opacity: 0, x: -50, duration: 0.1, stagger: 0.1})
+                }
+            });
+        });
+        observer.observe(linksEl);
+        return () => {
+            observer.unobserve(linksEl);
+        }
+    }, [])
     let menuClickHandler = useCallback(function (e) {
         e.preventDefault()
         let id = `#${e.target.innerText.split(" ")[0].toLowerCase()}`;
