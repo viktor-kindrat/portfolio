@@ -41,7 +41,7 @@ function Home() {
         };
     }, []);
     return (
-        <section className="Home">
+        <section className="Home" id="main">
             <div className="Home__content">
                 <h1 className="Home__headline">
                     <span className="Home__headline_small Home__move-content">Welcome to the page of</span>
