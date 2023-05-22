@@ -21,16 +21,19 @@ function Skills (){
     return (
         <section id="skills" className="Skills">
             <h2 className="Skills__headline">Skills</h2>
-            <div ref={skillsSwiper} className="Skills__swiper-container">
-                <swiper-container style={{ overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} slides-per-view="auto" space-between="25">
+            <div style={{height: (skillsData.current && !pending) ? "auto" : "180px",}} ref={skillsSwiper} className="Skills__swiper-container">
+                <swiper-container style={{ width: "100%", overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} direction="horizontal" navigation="false" slides-per-view="auto" center-insufficient-slides="true" space-between="25">
                     {
                         (skillsData.current && !pending) ? skillsData.current.map((item)=>
                             <swiper-slide key={item._doc._id} style={{width: "min-content", display: "flex", justifyContent: "center"}}>
                                 <SkillsCard swiperRef={skillsSwiper.current} data={item._doc}/>
                             </swiper-slide>
-                        ) : <Loader/>
+                        ) : ""
                     }
                 </swiper-container>
+                {
+                    (skillsData.current && !pending) ? "" : <Loader/>
+                }
             </div>
         </section>
     )

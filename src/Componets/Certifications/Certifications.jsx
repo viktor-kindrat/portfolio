@@ -21,16 +21,19 @@ function Certifications() {
     return (
         <section className="Certifications">
             <h2 className="Certifications__headline">Certifications</h2>
-            <div className="Certifications__slider-container" id="Certifications-swiper-parent" ref={swiper}>
-                <swiper-container style={{ overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} direction="horizontal" navigation="false" slides-per-view="auto" center-insufficient-slides="true" space-between="35">
+            <div style={{height: (certificates.current && !pending) ? "auto" : "180px",}} className="Certifications__slider-container" id="Certifications-swiper-parent" ref={swiper}>
+                <swiper-container style={{ width: "100%", overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} direction="horizontal" navigation="false" slides-per-view="auto" center-insufficient-slides="true" space-between="35">
                     {
                         (certificates.current && !pending) ? certificates.current.map(el =>
                             <swiper-slide key={el._doc._id} style={{ width: "min-content", display: "flex", justifyContent: "center" }}>
                                 <CertificationsCard swiperRef={swiper.current} data={el._doc} />
                             </swiper-slide>
-                        ) : <Loader/>
+                        ) : ""
                     }
                 </swiper-container>
+                {
+                    (certificates.current && !pending) ? "" : <Loader />
+                }
             </div>
         </section>
     )
