@@ -20,12 +20,12 @@ function Footer() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     console.log("observing inspects");
-                    tl.fromTo(".Footer__headline", {opacity: 0, x: -50}, {opacity: 1, x: 0, duration: 0.3, stagger: 0.05})
+                    tl.fromTo(".Footer__headline", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.05 })
                     tl.fromTo(".Footer__links-list-item", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.05 })
                 } else {
                     console.log("observing not inspects");
                     tl.fromTo(".Footer__links-list-item", { opacity: 1, x: 0, }, { opacity: 0, x: 50, duration: 0.1, stagger: 0.05 })
-                    tl.fromTo(".Footer__headline", {opacity: 1, x: 0}, {opacity: 0, x: -50, duration: 0.1, stagger: 0.1})
+                    tl.fromTo(".Footer__headline", { opacity: 1, x: 0 }, { opacity: 0, x: -50, duration: 0.1, stagger: 0.1 })
                 }
             });
         });
