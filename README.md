@@ -54,6 +54,6 @@ Pull requests are welcome! If you want to contribute to the code, please follow 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-[View design](https://www.figma.com/file/yySAkw0uBtrrUbd4tlK2wa/portfolio-v2?node-id=0%3A1&t=3trgxT2HLfryLEw0-1)
+[View design](https://www.figma.com/file/yySAkw0uBtrrUbd4tlK2wa/portfolio-v2?type=design&node-id=0%3A1&t=tfEQhHQeBfxn3Asv-1)
 
 
