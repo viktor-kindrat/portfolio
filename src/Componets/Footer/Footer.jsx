@@ -22,7 +22,7 @@ function Footer() {
     return (
         <footer className="Footer">
             <div className="Footer__content">
-                <img src={logo} alt="Viktor's logo" />
+                <img className="Footer__logo" src={logo} alt="Viktor's logo" />
                 <div className="Footer__links">
                     <div className="Footer__links-group">
                         <h4 className="Footer__headline">Go to:</h4>
