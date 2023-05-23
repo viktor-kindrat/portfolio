@@ -5,7 +5,10 @@ import sendIcon from "./images/send.svg"
 function GetInTouch(){
     return (
         <section className="GetInTouch" id="get">
-            <h2 className="GetInTouch__headline">Get in touch</h2>
+            <div className="GetInTouch__headline-wrapper">
+                <h2 className="GetInTouch__headline">Get in touch</h2>
+                <p className="GetInTouch__caption">If you have any questions write me in the form below</p>
+            </div>
             <div className="GetInTouch__row">
                 <form id="GetInTouchForm" className="GetInTouch__form">
                     <input autoComplete="name" name="name" type="text" placeholder="Your name" className="GetInTouch__input" />
