@@ -1,0 +1,163 @@
+.GetInTouch {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 150px 50px 150px;
+
+    .GetInTouch__headline-wrapper {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        .GetInTouch__headline {
+            font-family: 'Arima Madurai', cursive;
+            font-style: normal;
+            font-weight: 900;
+            font-size: calc(25px + 1.5vw);
+            line-height: calc(25px + 1.5vw);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #141414;
+        }
+
+        .GetInTouch__caption {
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(10px + .4vw);
+            line-height: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+        }
+    }
+
+    .GetInTouch__row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .GetInTouch__form {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+
+            .GetInTouch__form-input-group {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
+                position: relative;
+
+                .GetInTouch__input {
+                    padding: 15px 25px;
+                    border: none;
+                    outline: none;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+                    border-radius: 5px;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    color: #141414;
+
+                    &_area {
+                        min-height: 300px;
+                        resize: vertical;
+                    }
+                }
+
+                .GetInTouch__form-placeholder {
+                    position: absolute;
+                    top: 17px;
+                    left: 20px;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    color: rgba(20, 20, 20, 0.6);
+                    user-select: none;
+                    pointer-events: none;
+                    transition: 0.3s ease-out;
+                    -webkit-transition: 0.3s ease-out;
+                    -moz-transition: 0.3s ease-out;
+                    -ms-transition: 0.3s ease-out;
+                    -o-transition: 0.3s ease-out;
+                }
+            }
+
+        }
+
+        .GetInTouch__image-wrapper {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .GetInTouch__image {
+                height: min(467px, 80vh);
+                max-height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    .GetInTouch__button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 4rem;
+        gap: 10px;
+        background: #141414;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+
+        .GetInTouch__button-icon {
+            height: 24px;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .GetInTouch__button-text {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: calc(14px + .4vw);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+        }
+    }
+}
