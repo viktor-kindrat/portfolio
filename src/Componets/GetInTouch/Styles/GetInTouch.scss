@@ -81,7 +81,7 @@
                     color: #141414;
 
                     &_area {
-                        min-height: 300px;
+                        min-height: 250px;
                         resize: vertical;
                     }
                 }
@@ -117,7 +117,7 @@
             justify-content: center;
 
             .GetInTouch__image {
-                height: min(467px, 80vh);
+                height: min(400px, 80vh);
                 max-height: 100%;
                 width: 100%;
                 object-fit: contain;

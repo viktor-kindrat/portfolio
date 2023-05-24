@@ -78,7 +78,7 @@
   color: #141414;
 }
 .GetInTouch .GetInTouch__row .GetInTouch__form .GetInTouch__form-input-group .GetInTouch__input_area {
-  min-height: 300px;
+  min-height: 250px;
   resize: vertical;
 }
 .GetInTouch .GetInTouch__row .GetInTouch__form .GetInTouch__form-input-group .GetInTouch__form-placeholder {
@@ -108,7 +108,7 @@
   justify-content: center;
 }
 .GetInTouch .GetInTouch__row .GetInTouch__image-wrapper .GetInTouch__image {
-  height: min(467px, 80vh);
+  height: min(400px, 80vh);
   max-height: 100%;
   width: 100%;
   object-fit: contain;

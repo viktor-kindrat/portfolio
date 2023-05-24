@@ -1,4 +1,5 @@
 .Alert {
+  opacity: 0;
   position: fixed;
   z-index: 10000;
   top: 50px;

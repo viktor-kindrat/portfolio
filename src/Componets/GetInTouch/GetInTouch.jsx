@@ -1,9 +1,12 @@
-import { useCallback } from "react"
+import { useCallback, useState } from "react"
+
 import "./Styles/GetInTouch.css"
 import image from "./images/img.webp"
 import sendIcon from "./images/send.svg"
+import Alert from "../Alert/Alert"
 
 function GetInTouch() {
+    let [alertData, setAlertData] = useState(false)
     const formSubmitHandler = useCallback((e) => {
         e.preventDefault();
         let labels = document.querySelectorAll(".GetInTouch__form-placeholder");
@@ -20,7 +23,10 @@ function GetInTouch() {
             .then((data) => {
                 console.log(data);
                 if(data.msg === "success") {
-                    alert("sended")
+                    setAlertData({message: "Thank you for your message! \u{1F60D}", liveTime: 4000, type: "sended"})
+                    setTimeout(() => {
+                        setAlertData(false)
+                    }, 4000);
                 }
                 e.target.reset();
                 labels.forEach(label=>label.removeAttribute("style"))
@@ -45,6 +51,9 @@ function GetInTouch() {
     }, [])
     return (
         <section className="GetInTouch" id="get">
+            {
+                (alertData) ? <Alert message={alertData.message} liveTime={alertData.liveTime} type={alertData.type}/> : ""
+            }
             <div className="GetInTouch__headline-wrapper">
                 <h2 className="GetInTouch__headline">Get in touch</h2>
                 <p className="GetInTouch__caption">If you have any questions write me in the form below</p>
@@ -61,7 +70,7 @@ function GetInTouch() {
                     </div>
                 </form>
                 <div className="GetInTouch__image-wrapper">
-                    <img className="GetInTouch__image" height={467} src={image} alt="Viktor drawing something" />
+                    <img className="GetInTouch__image" height={400} src={image} alt="Viktor drawing something" />
                 </div>
             </div>
             <button form="GetInTouchForm" className="GetInTouch__button" type="submit">
