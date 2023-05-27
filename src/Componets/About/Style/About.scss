@@ -164,6 +164,10 @@
         .About__content {
             justify-content: flex-start;
 
+            .About__progress-bar-container {
+                padding: 0 25px;
+            }
+
             .About__content-inner {
                 flex-direction: column;
                 font-size: 14px;

@@ -161,3 +161,53 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .GetInTouch {
+        padding: 25px 50px 50px 50px;
+        gap: 25px;
+
+        .GetInTouch__row {
+            .GetInTouch__form {
+                width: 60%;
+                gap: 25px
+            }
+            .GetInTouch__image-wrapper {
+                height: 100%;
+                width: 40%;
+    
+                .GetInTouch__image {
+                    width: 100%;
+                    height: min(350px, 80vh);
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .GetInTouch {
+        padding: 25px 25px 50px 25px;
+        gap: 25px;
+
+        .GetInTouch__row {
+            flex-direction: column-reverse;
+            gap: 25px;
+            .GetInTouch__form {
+                width: 100%;
+                gap: 25px
+            }
+            .GetInTouch__image-wrapper {
+                height: auto;
+                width: 100%;
+    
+                .GetInTouch__image {
+                    width: 100%;
+                    height: min(150px, 20vh);
+                }
+            }
+        }
+
+    }
+}

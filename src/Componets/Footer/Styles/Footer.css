@@ -180,6 +180,11 @@
     height: 20px;
   }
   .Footer .Footer__img {
+    height: 170px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .Footer .Footer__img {
     display: none;
   }
 }
