@@ -1,5 +1,7 @@
 # Portfolio (in development)
 
+this test version has link: https://super-chaja-0ca4d6.netlify.app/
+
 [![wakatime](https://wakatime.com/badge/github/victor-kindrat/portfolio.svg)](https://wakatime.com/badge/github/victor-kindrat/portfolio)
 
 This is my personal portfolio website. The website showcases some of my projects and provides information about his skills and experience.

@@ -10,6 +10,9 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style>
+        body {
+            overflow: hidden;
+        }
         @font-face {
             font-family: "Raleway";
             font-style: normal;
@@ -191,6 +194,8 @@
                 scaleY: [0, 1.2],
                 d: LOADER.path.getAttribute("pathdata:id")
             });
+            document.querySelector(".Header").scrollIntoView({behavior:"auto"})
+            document.body.style.overflow = "auto"
         };
         window.addEventListener("load", () => {
             setTimeout(svgAnimation, 2000);
