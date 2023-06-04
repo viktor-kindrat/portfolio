@@ -19,7 +19,7 @@ function Certifications() {
             })
     }, [])
     return (
-        <section className="Certifications">
+        <section id="skills" className="Certifications">
             <h2 className="Certifications__headline">Certifications</h2>
             <div style={{height: (certificates.current && !pending) ? "auto" : "180px",}} className="Certifications__slider-container" id="Certifications-swiper-parent" ref={swiper}>
                 <swiper-container style={{ width: "100%", overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} direction="horizontal" navigation="false" slides-per-view="auto" center-insufficient-slides="true" space-between="35">

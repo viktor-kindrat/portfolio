@@ -19,7 +19,7 @@ function Skills (){
             })
     }, [])
     return (
-        <section id="skills" className="Skills">
+        <section  className="Skills">
             <h2 className="Skills__headline">Skills</h2>
             <div style={{height: (skillsData.current && !pending) ? "auto" : "180px",}} ref={skillsSwiper} className="Skills__swiper-container">
                 <swiper-container style={{ width: "100%", overflow: "visible", display: "flex", justifyContent: "center", padding: "0 25px" }} direction="horizontal" navigation="false" slides-per-view="auto" center-insufficient-slides="true" space-between="25">
