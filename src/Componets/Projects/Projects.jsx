@@ -32,7 +32,7 @@ function Projects (){
                 {
                     (!pending && projects.current !== null) ? projects.current.map((item)=>
                         <div key={item._doc._id} className="Projects__item">
-                            <img className="Projects__item-image" height={300} src={`data:${item._doc.image.contentType};base64,${item._doc.image.data}`} alt={`${item._doc.name} skill`}  />
+                            <img className="Projects__item-image" height={300} src={`data:${item._doc.image.contentType};base64,${item._doc.image.data}`} alt={`${item._doc.name} project`}  />
                             <div className="Projects__item-content">
                                 <button onClick={()=>itemButtonHandler(item._doc)} className="Projects__item-button">View details</button>
                             </div>
