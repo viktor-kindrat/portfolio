@@ -31,13 +31,13 @@ function ProjectPopup({ visibility, handleClose, data }) {
     return (
         <div className="ProjectPopup">
             <div className="ProjectPopup__content">
-                <button onClick={handleClose}><img src={closeIcon} alt="close buttons" /></button>
+                <button className="ProjectPopup__close-btn" onClick={handleClose}><img height={25} src={closeIcon} alt="close buttons" /></button>
                 <div className="ProjectPopup__content-container">
                     <div className="ProjectPopup__image-container">
-                        <img height={400} src={`data:${data.image.contentType};base64,${data.image.data}`} alt={data.name + " project preview"} />
+                        <img className="ProjetPopup__image" height={400} src={`data:${data.image.contentType};base64,${data.image.data}`} alt={data.name + " project preview"} />
                         <div className="ProjectPopup__links-container">
-                            <a href={data.webLink} target="_blank" rel="noreferrer" className="ProjectPopup__link"><img height={50} width={50} src={linkIcon} alt="project link" className="ProjectPopup__link-icon" /></a>
-                            <a href={data.githubLink} target="_blank" rel="noreferrer" className="ProjectPopup__link"><img height={50} width={50} src={githubIcon} alt="github link" className="ProjectPopup__link-icon" /></a>
+                            <a href={data.webLink} target="_blank" media="project link" rel="noreferrer" className="ProjectPopup__link"><img height={50} width={50} src={linkIcon} alt="project link" className="ProjectPopup__link-icon" /></a>
+                            <a href={data.githubLink} target="_blank" media="github link" rel="noreferrer" className="ProjectPopup__link"><img height={50} width={50} src={githubIcon} alt="github link" className="ProjectPopup__link-icon" /></a>
                         </div>
                     </div>
                     <div className="ProjectPopup__text-container">

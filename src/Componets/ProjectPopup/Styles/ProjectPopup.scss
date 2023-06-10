@@ -19,9 +19,167 @@
         padding: 25px;
         border-radius: 5px;
         overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
+
+        .ProjectPopup__close-btn {
+            height: 25px;
+            width: 25px;
+            align-self: flex-end;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            overflow: none;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .ProjectPopup__content-container {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .ProjectPopup__image-container {
+                display: flex;
+                gap: 25px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .ProjetPopup__image {
+                    height: 350px;
+                    width: 500px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                }
+
+                .ProjectPopup__links-container {
+                    width: 100%;
+                    display: flex;
+                    gap: 25px;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .ProjectPopup__link {
+                        height: 50px;
+                        width: 50px;
+                        cursor: pointer;
+
+                        .ProjectPopup__link-icon {
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            .ProjectPopup__text-container {
+                display: flex;
+                gap: 25px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .ProjectPopup__headline {
+                    font-family: 'Arima Madurai';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: calc(15px + 1vw);
+                    line-height: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    text-align: left;
+                    color: #141414;
+                }
+
+                .ProjectPopup__type-badge {
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 15px;
+                    border-radius: 45px;
+                    -webkit-border-radius: 45px;
+                    -moz-border-radius: 45px;
+                    -ms-border-radius: 45px;
+                    -o-border-radius: 45px;
+
+                    .ProjectPopup__type-text {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: calc(12px + 0.3vw);
+                        line-height: 100%;
+                        display: flex;
+                        align-items: center;
+                        text-align: justify;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .ProjectPopup__description {
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: calc(10px + 0.3vw);
+                    line-height: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: justify;
+                    color: #141414;
+                }
+
+                .ProjectPopup__features {
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+
+                    .ProjectPopup__headline_features {
+                        font-size: calc(10px + 1vw);
+                    }
+
+                    .ProjectPopup__features-container {
+                        display: flex;
+                        gap: 3px;
+                        flex-direction: column;
+                        list-style-position: inside;
+                        
+                        .ProjectPopup__feature {
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: calc(10px + 0.3vw);
+                            line-height: 100%;
+                            color: #141414;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }
