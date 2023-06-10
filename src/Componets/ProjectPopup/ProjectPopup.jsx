@@ -29,7 +29,7 @@ function ProjectPopup({ visibility, handleClose, data }) {
         }
     }, [visibility])
     return (
-        <div className="ProjectPopup">
+        (data.name) ? <div className="ProjectPopup">
             <div className="ProjectPopup__content">
                 <button className="ProjectPopup__close-btn" onClick={handleClose}><img height={25} src={closeIcon} alt="close buttons" /></button>
                 <div className="ProjectPopup__content-container">
@@ -51,7 +51,7 @@ function ProjectPopup({ visibility, handleClose, data }) {
                             <h3 className="ProjectPopup__headline ProjectPopup__headline_features">Features:</h3>
                             <ul className="ProjectPopup__features-container">
                                 {
-                                    data.features.map(item => 
+                                    data.features.map(item =>
                                         <li className="ProjectPopup__feature">{item}</li>
                                     )
                                 }
@@ -61,7 +61,7 @@ function ProjectPopup({ visibility, handleClose, data }) {
                 </div>
 
             </div>
-        </div>
+        </div> : ""
     )
 }
 

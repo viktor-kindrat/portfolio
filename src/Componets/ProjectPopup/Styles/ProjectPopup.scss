@@ -59,7 +59,8 @@
 
                 .ProjetPopup__image {
                     height: 350px;
-                    width: 500px;
+                    width: auto;
+                    aspect-ratio: 3/2;
                     object-fit: cover;
                     border-radius: 5px;
                     -webkit-border-radius: 5px;

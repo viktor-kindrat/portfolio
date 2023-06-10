@@ -31,7 +31,8 @@
 }
 .Projects .Projects__container .Projects__item {
   height: 300px;
-  width: 450px;
+  width: auto;
+  aspect-ratio: 3/2;
   position: relative;
   display: flex;
   align-items: center;
