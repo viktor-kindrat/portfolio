@@ -1,5 +1,6 @@
 import "./Styles/Projects.css"
 import Loader from "../Loader/Loader"
+import ProjectPopup from "../ProjectPopup/ProjectPopup";
 import { useEffect, useRef, useState, useCallback } from "react"
 
 function Projects (){
@@ -39,6 +40,7 @@ function Projects (){
                     ) : <Loader/>
                 }
             </div>
+            <ProjectPopup data={popupData} visibility={popupVisibility} handleClose={()=>setPopupVisibility(false)}/>
         </section>
     )
 }
