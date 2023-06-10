@@ -1,4 +1,4 @@
-# Portfolio (in development)
+# Portfolio 
 
 [![wakatime](https://wakatime.com/badge/github/victor-kindrat/portfolio.svg)](https://wakatime.com/badge/github/victor-kindrat/portfolio)
 
