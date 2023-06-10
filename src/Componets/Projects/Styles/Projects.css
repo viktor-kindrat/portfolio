@@ -1,0 +1,6 @@
+.Projects {
+  min-height: 350px;
+}
+.Projects .Project__temp-case {
+  position: relative;
+}
