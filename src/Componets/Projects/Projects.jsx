@@ -33,14 +33,14 @@ function Projects() {
             </div>
             <div className="Projects__container">
                 {
-                    (!pending && projects.current !== null) ? finalData.map((item) =>
+                    (!pending && projects.current !== null) ? (finalData.length > 0) ? finalData.map((item) =>
                         <div key={item._doc._id} className="Projects__item">
                             <img className="Projects__item-image" height={300} src={`data:${item._doc.image.contentType};base64,${item._doc.image.data}`} alt={`${item._doc.name} project`} />
                             <div className="Projects__item-content">
                                 <button onClick={() => itemButtonHandler(item._doc)} className="Projects__item-button">View details</button>
                             </div>
                         </div>
-                    ) : <Loader />
+                    ) : "I haven't done anything by this filter yet. Try another request" : <Loader />
                 }
             </div>
             <ProjectPopup data={popupData} visibility={popupVisibility} handleClose={() => setPopupVisibility(false)} />
