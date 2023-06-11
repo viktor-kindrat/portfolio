@@ -1,12 +1,12 @@
 .Projects {
     width: 100%;
-    min-height: 500px;
+    min-height: 350px;
     padding: 25px 150px;
     display: flex;
     gap: 25px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     .Projects__headline {
         font-family: 'Arima Madurai';
@@ -19,6 +19,14 @@
         text-align: center;
         text-transform: uppercase;
         color: #141414;
+    }
+
+    .Projects__filters {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .Projects__container {
