@@ -24,7 +24,7 @@ function ProjectFilter({ data, setData }) {
     let filter = () => {
         let nameFilter = [...dataCopy.current].filter(item => item._doc.name.toLowerCase().includes(filterCore.current.name.toLowerCase()))
         let nameAndTechFilter = nameFilter.filter(item => {
-            return item._doc.features.map(item1 => item1.toLowerCase()).filter(item2 => item2.includes(filterCore.current.tech.toLowerCase())).length > 0 || item._doc.name.toLowerCase().includes(filterCore.current.tech) || item._doc.description.toLowerCase().includes(filterCore.current.tech)
+            return item._doc.features.filter(item2 => item2.toLowerCase().includes(filterCore.current.tech.toLowerCase())).length > 0 || item._doc.name.toLowerCase().includes(filterCore.current.tech) || item._doc.description.toLowerCase().includes(filterCore.current.tech)
         })
         console.log("Name and thech filtered arr: ", nameAndTechFilter)
         let filtered;
