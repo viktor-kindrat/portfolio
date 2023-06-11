@@ -9,12 +9,14 @@ function Projects() {
     let [popupVisibility, setPopupVisibility] = useState(false);
     let [popupData, setPopupData] = useState({});
     let projects = useRef(null);
+    let [finalData, setFinalData] = useState([])
     useEffect(() => {
         fetch("https://portfolio-api-5x6x.onrender.com/db/getProjects")
             .then(res => res.json())
             .then(data => {
                 projects.current = data;
                 setPanding(false)
+                setFinalData(data)
                 console.log(data)
             })
     }, [])
@@ -27,11 +29,11 @@ function Projects() {
         <section className="Projects" id="projects">
             <h2 className="Projects__headline">Projects</h2>
             <div className="Projects__filters">
-                {(!pending && projects.current !== null) ? <ProjectFilter /> : ""}
+                {(!pending && projects.current !== null) ? <ProjectFilter data={finalData} setData={(arr)=>setFinalData(arr)} /> : ""}
             </div>
             <div className="Projects__container">
                 {
-                    (!pending && projects.current !== null) ? projects.current.map((item) =>
+                    (!pending && projects.current !== null) ? finalData.map((item) =>
                         <div key={item._doc._id} className="Projects__item">
                             <img className="Projects__item-image" height={300} src={`data:${item._doc.image.contentType};base64,${item._doc.image.data}`} alt={`${item._doc.name} project`} />
                             <div className="Projects__item-content">

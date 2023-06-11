@@ -4,12 +4,26 @@ import filterIcon from "./Images/filterIcon.svg"
 import { useState, useCallback, useEffect } from "react"
 import { gsap } from "gsap"
 
-function ProjectFilter (props) {
-    let [filtersVisibility, setFiltersVisibility] = useState(false)
+function ProjectFilter ({data, setData}) {
+    let [filtersVisibility, setFiltersVisibility] = useState(false);
+    let [res, setRes] = useState([...data])
+
     let togglerOfFilter = useCallback((e)=> {
         console.log(!filtersVisibility)
         setFiltersVisibility(!filtersVisibility)
-    }, [filtersVisibility])
+    }, [filtersVisibility]);
+
+    let selectChangeHandler = useCallback((e)=>{
+        let aim = e.target.value;
+        let filtered
+        if (aim !== "all") {
+            filtered = data.filter(item=>item._doc.type === aim)
+        } else {
+            filtered = data
+        }
+        setRes(filtered)
+    }, [data])
+
     useEffect(()=>{
         let tl = gsap.timeline();
         console.log(filtersVisibility)
@@ -31,11 +45,15 @@ function ProjectFilter (props) {
             })
         }
     }, [filtersVisibility])
+
+    useEffect(()=>{
+        setData(res)
+    }, [res, setData])
     return (
         <div className="ProjectFilter">
             <button onClick={togglerOfFilter} type="button" className="ProjectFilter__thumbler"><img height={15} src={filterIcon} alt="filter" />Filter</button>
-            <select name="projectType" id="typeFilter" className="ProjectFilter__animate ProjectFilter__select" value="all">
-                <option value="all" className="ProjectFilter__option" selected>Type</option>
+            <select onChange={selectChangeHandler} name="projectType" id="typeFilter" className="ProjectFilter__animate ProjectFilter__select" defaultValue="all">
+                <option value="all" className="ProjectFilter__option">All types</option>
                 <option value="pet" className="ProjectFilter__option">Pet project</option>
                 <option value="commercial" className="ProjectFilter__option">Commercial</option>
                 <option value="team" className="ProjectFilter__option">Team project</option>
