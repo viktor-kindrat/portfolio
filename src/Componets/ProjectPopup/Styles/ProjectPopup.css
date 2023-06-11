@@ -165,3 +165,32 @@
   line-height: 100%;
   color: #141414;
 }
+
+@media screen and (max-width: 1200px) {
+  .ProjectPopup {
+    padding: 50px;
+  }
+  .ProjectPopup .ProjectPopup__content .ProjectPopup__content-container .ProjectPopup__image-container .ProjetPopup__image {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ProjectPopup {
+    padding: 25px;
+  }
+  .ProjectPopup .ProjectPopup__content {
+    gap: 25px;
+  }
+  .ProjectPopup .ProjectPopup__content .ProjectPopup__content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ProjectPopup .ProjectPopup__content .ProjectPopup__content-container .ProjectPopup__image-container {
+    width: 100%;
+  }
+  .ProjectPopup .ProjectPopup__content .ProjectPopup__content-container .ProjectPopup__image-container .ProjetPopup__image {
+    height: auto;
+    width: min(300px, 100%);
+  }
+}

@@ -39,8 +39,8 @@
         column-gap: 50px;
 
         .Projects__item {
-            height: 300px;
-            width: auto;
+            height: auto;
+            width: min(450px, 100%);
             aspect-ratio: 3/2;
             position: relative;
             display: flex;
@@ -104,5 +104,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Projects {
+        padding: 25px;
     }
 }

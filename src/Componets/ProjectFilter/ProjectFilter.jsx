@@ -57,7 +57,10 @@ function ProjectFilter({ data, setData }) {
     useEffect(() => {
         let tl = gsap.timeline();
         if (filtersVisibility) {
-            tl.to(".ProjectFilter__animate", {
+            tl.set(".ProjectFilter__animate", {
+                display: "flex"
+            })
+            .to(".ProjectFilter__animate", {
                 opacity: 1,
                 y: 0,
                 duration: 0.3,
@@ -71,6 +74,9 @@ function ProjectFilter({ data, setData }) {
                 duration: 0.3,
                 ease: "power3.inOut",
                 stagger: -0.1
+            })
+            .set(".ProjectFilter__animate", {
+                display: "none"
             })
         }
     }, [filtersVisibility])

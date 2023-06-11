@@ -168,7 +168,7 @@
                         gap: 3px;
                         flex-direction: column;
                         list-style-position: inside;
-                        
+
                         .ProjectPopup__feature {
                             font-family: 'Raleway';
                             font-style: normal;
@@ -181,6 +181,43 @@
                 }
             }
 
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .ProjectPopup {
+        padding: 50px;
+
+        .ProjectPopup__content {
+            .ProjectPopup__content-container {
+                .ProjectPopup__image-container {
+                    .ProjetPopup__image {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .ProjectPopup {
+        padding: 25px;
+
+        .ProjectPopup__content {
+            gap: 25px;
+            .ProjectPopup__content-container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .ProjectPopup__image-container {
+                    width: 100%;
+                    .ProjetPopup__image {
+                        height: auto;
+                        width: min(300px, 100%);
+                    }
+                }
+            }
         }
     }
 }
