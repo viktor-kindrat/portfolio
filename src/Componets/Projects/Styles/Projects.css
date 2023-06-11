@@ -28,6 +28,7 @@
   justify-content: center;
 }
 .Projects .Projects__container {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
