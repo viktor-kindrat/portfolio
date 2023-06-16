@@ -37,7 +37,18 @@ function ProjectFilter({ data, setData }) {
         let role = target.dataset.role;
         filterCore.current[role] = target.value;
         setRes(filter())
-    }, [filterCore])
+    }, [filterCore]);
+
+    let resetHandler = useCallback(e=>{
+        filterCore.current = {
+            name: "",
+            tech: "",
+            type: "all"
+        };
+        document.querySelectorAll(".ProjectFilter__input").forEach(el=>el.value = "");
+        document.querySelector(".ProjectFilter__select").value = "all"
+        setRes(filter())
+    }, [])
 
     const formInputFocus = useCallback((e) => {
         const label = e.target.parentElement.children[0];
@@ -101,7 +112,7 @@ function ProjectFilter({ data, setData }) {
                 <label htmlFor="filterByName" className="ProjectFilter__input-placeholder">Search by name</label>
                 <input onFocus={formInputFocus} onBlur={formInputBlur} onInput={changeHandler} type="text" id="filterByName" data-role="name" className="ProjectFilter__input" />
             </div>
-            {filterCore.current.name === "" && filterCore.current.type === "all" && filterCore.current.tech === "" ? "" : <button className="ProjectsFilter__clear-btn">Reset</button>}
+            {filterCore.current.name === "" && filterCore.current.type === "all" && filterCore.current.tech === "" ? "" : <button onClick={resetHandler} className="ProjectsFilter__clear-btn">Reset</button>}
         </div>
     )
 }
