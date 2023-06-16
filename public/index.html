@@ -7,20 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Viktor Kindrat's portfolio webpage." />
-    <meta name="keywords" content="developer, webdev, web developer, Viktor, Kindrat, Viktor Kindrat, frontend, backend, frontend developer, backend developer, html, css, JavaScript, js, React, Victor, developer Yavoriv, developer Lviv, Yavoriv, Lviv, remote web developer, programmer, make websites">
+    <meta name="keywords"
+        content="developer, webdev, web developer, Viktor, Kindrat, Viktor Kindrat, frontend, backend, frontend developer, backend developer, html, css, JavaScript, js, React, Victor, developer Yavoriv, developer Lviv, Yavoriv, Lviv, remote web developer, programmer, make websites">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <style>
         body {
             overflow: hidden;
         }
+
         @font-face {
             font-family: "Raleway";
             font-style: normal;
             font-weight: 400;
             src: url("./temp-fonts/Raleway-Regular.ttf");
         }
-        
+
         .preloader-page {
             position: fixed;
             top: 0;
@@ -33,7 +35,7 @@
             z-index: 10000;
             font-display: block;
         }
-        
+
         .preloader-page .loader__wrapper {
             position: relative;
             width: 100%;
@@ -42,7 +44,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .preloader-page .loader__text {
             height: calc(70px + 1vw);
             position: absolute;
@@ -62,7 +64,7 @@
             transition: 0.5s;
             overflow: hidden;
         }
-        
+
         .preloader-page .loader__text::before {
             content: "";
             width: 0;
@@ -73,7 +75,7 @@
             position: absolute;
             top: 0;
         }
-        
+
         .preloader-page .loader__text::after {
             content: "";
             width: 0;
@@ -84,81 +86,103 @@
             position: absolute;
             bottom: 0;
         }
-        
+
         @keyframes blick1 {
             0% {
                 width: 0;
                 left: 0;
             }
+
             20% {
                 width: 100%;
             }
+
             50% {
                 width: 0;
                 left: 100%;
             }
+
             51% {
                 left: -100%;
                 width: 0;
             }
+
             70% {
                 width: 100%;
             }
+
             100% {
                 width: 0;
                 left: 0;
             }
         }
-        
+
         @keyframes blick2 {
             0% {
                 width: 0;
                 right: 0;
             }
+
             20% {
                 width: 100%;
             }
+
             50% {
                 width: 0;
                 right: 100%;
             }
+
             51% {
                 right: -100%;
                 width: 0;
             }
+
             70% {
                 width: 100%;
             }
+
             100% {
                 width: 0;
                 right: 0;
             }
         }
-        
+
         .preloader-page .loader__shape {
             width: 100%;
             margin: -0.5rem 0 0 0;
             position: relative;
         }
-        
+
         .preloader-page .shape {
             height: 100vh;
             width: 100%;
             display: block;
             fill: #050505;
         }
-        
+
         @keyframes SpinAround {
             0% {
                 transform: translate(-50%, -50%) rotate(0);
             }
+
             100% {
                 transform: translate(-50%, -50%) rotate(-360deg);
             }
         }
     </style>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Viktor K</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-230YZTC0QJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-230YZTC0QJ');
+    </script>
 </head>
 
 <body>
@@ -170,8 +194,11 @@
         </div>
         <div class="loader__shape">
             <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800">
-          <path d="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
-        </svg>
+                <path
+                    d="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"
+                    pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z">
+                </path>
+            </svg>
         </div>
     </div>
     <script>
@@ -195,7 +222,7 @@
                 scaleY: [0, 1.2],
                 d: LOADER.path.getAttribute("pathdata:id")
             });
-            document.querySelector(".Header").scrollIntoView({behavior:"auto"})
+            document.querySelector(".Header").scrollIntoView({ behavior: "auto" })
             document.body.style.overflow = "auto"
         };
         window.addEventListener("load", () => {
