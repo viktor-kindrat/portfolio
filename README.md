@@ -2,7 +2,7 @@
 
 [![wakatime](https://wakatime.com/badge/github/victor-kindrat/portfolio.svg)](https://wakatime.com/badge/github/victor-kindrat/portfolio)
 
-This is my personal portfolio website. The website showcases some of my projects and provides information about his skills and experience
+This is my personal portfolio website. The website show cases some of my projects and provides information about his skills and experience
 
 ## Table of Contents
 
