@@ -6,6 +6,9 @@ import { useEffect, useRef, useState, useCallback } from "react"
 
 function Projects() {
     let [pending, setPanding] = useState(true);
+
+    let [reload, toggleReload] = useState(true)
+
     let [popupVisibility, setPopupVisibility] = useState(false);
     let [popupData, setPopupData] = useState({});
     let projects = useRef(null);
@@ -14,6 +17,7 @@ function Projects() {
 
 
     useEffect(() => {
+        let x;
         const fetchProjects = ()=>{
             fetch("https://portfolio-api-5x6x.onrender.com/db/getProjects").then(res => res.json())
             .then(data => {
@@ -32,15 +36,22 @@ function Projects() {
                             setPanding(false)
                             setFinalData(data)
                         });
-                    } else{
-                        window.location.reload();
+                    } else {
+                        x = setTimeout(()=>{
+                            console.log("toggled")
+                            toggleReload(!reload)
+                        }, 3000)
                     }
                 });
             });
         } else {
             fetchProjects()
         }
-    }, [])
+
+        return ()=> {
+            clearTimeout(x)
+        }
+    }, [reload])
 
     let itemButtonHandler = useCallback((item) => {
         setPopupVisibility(true)
