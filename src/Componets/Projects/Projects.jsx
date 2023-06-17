@@ -17,7 +17,6 @@ function Projects() {
                 projects.current = data;
                 setPanding(false)
                 setFinalData(data)
-                console.log(data)
             })
     }, [])
 

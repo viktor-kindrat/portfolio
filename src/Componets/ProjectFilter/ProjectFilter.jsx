@@ -97,7 +97,7 @@ function ProjectFilter({ data, setData }) {
     }, [res, setData])
     return (
         <div className="ProjectFilter">
-            <button onClick={togglerOfFilter} type="button" className="ProjectFilter__thumbler"><img height={15} src={filterIcon} alt="filter" />Filter</button>
+            <button onClick={togglerOfFilter} type="button" className="ProjectFilter__thumbler"><img width={15} height={15} src={filterIcon} alt="filter" />Filter</button>
             <select onChange={changeHandler} style={{ backgroundImage: `url("${downArrow}")` }} name="projectType" data-role="type" id="typeFilter" className="ProjectFilter__animate ProjectFilter__select" defaultValue="all">
                 <option value="all" className="ProjectFilter__option">All types</option>
                 <option value="pet" className="ProjectFilter__option">Pet project</option>

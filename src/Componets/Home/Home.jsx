@@ -10,21 +10,19 @@ import MainBodyAnimation from "../MainBodyAnimation/MainBodyAnimation"
 function Home() {
     const typedEl = useRef(null);
     useEffect(() => {
-        const setTl = ()=>{
+        const setTl = () => {
             let tl = gsap.timeline()
             tl.set(".Home__move-content", {
                 x: -100,
                 opacity: 0,
             })
-            setTimeout(() => {
-                tl.to(".Home__move-content", {
-                    x: 0,
-                    opacity: 1,
-                    duration: 0.5,
-                    stagger: 0.3,
-                    delay: 0.3
-                })
-            }, 3000);
+            tl.to(".Home__move-content", {
+                x: 0,
+                opacity: 1,
+                duration: 0.5,
+                stagger: 0.3,
+                delay: 3.3
+            })
         }
         const typed = new Typed(typedEl.current, {
             strings: ['Viktor Kindtat', 'Web developer', 'Web designer', 'Coding fan'],
