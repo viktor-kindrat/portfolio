@@ -47,7 +47,7 @@ function Footer() {
                 <img className="Footer__logo" src={logo} alt="Viktor's logo" />
                 <div className="Footer__links">
                     <div className="Footer__links-group">
-                        <h4 className="Footer__headline">Go to:</h4>
+                        <h2 className="Footer__headline">Go to:</h2>
                         <nav className="Footer__nav">
                             <ul className="Footer__links-list">
                                 <li onClick={menuClickHandler} className="Footer__links-list-item"><a href="/" className="Footer__links-list-item-link">Main page</a></li>
@@ -60,7 +60,7 @@ function Footer() {
                     </div>
 
                     <div className="Footer__links-group">
-                        <h4 className="Footer__headline">In social</h4>
+                        <h2 className="Footer__headline">In social</h2>
                         <ul className="Footer__links-list">
                             <li className="Footer__links-list-item"><a rel="noreferrer" target="_blank" href="mailTo:kindratvictor@gmail.com" className="Footer__links-list-item-link"><img src={mailIcon} alt="linkedIn icon" className="Footer__links-list-item-img" /> kindratvictor@gmail.com</a></li>
                             <li className="Footer__links-list-item"><a rel="noreferrer" target="_blank" href="https://www.instagram.com/victor_kindrat/" className="Footer__links-list-item-link"><img src={instagramIcon} alt="linkedIn icon" className="Footer__links-list-item-img" /> @victor-kindrat</a></li>

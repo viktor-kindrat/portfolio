@@ -17,6 +17,7 @@ function Certifications() {
                 certificates.current = data;
                 setPending(false)
             })
+            .catch(e=>console.log(e))
     }, [])
     return (
         <section id="skills" className="Certifications">
