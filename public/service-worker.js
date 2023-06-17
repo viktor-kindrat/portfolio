@@ -1,6 +1,6 @@
 self.addEventListener('fetch', function (event) {
     event.respondWith(
-        caches.open('projects-array').then(function (cache) {
+        caches.open('info-api-data').then(function (cache) {
             return cache.match(event.request).then(function (response) {
                 return (
                     response ||

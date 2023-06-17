@@ -24,7 +24,7 @@ if ('serviceWorker' in navigator) {
               return response.json();
           })
           .then(function (data) {
-              caches.open('projects-array').then(function (cache) {
+              caches.open('info-api-data').then(function (cache) {
                   cache.put('projects', new Response(JSON.stringify(data)));
               });
           });

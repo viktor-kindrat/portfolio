@@ -24,7 +24,7 @@ function Projects() {
         }
 
         if ('caches' in window) {
-            caches.open('projects-array').then(function (cache) {
+            caches.open('info-api-data').then(function (cache) {
                 cache.match('projects').then(function (response) {
                     if (response) {
                         response.json().then(function (data) {
