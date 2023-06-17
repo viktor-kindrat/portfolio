@@ -33,7 +33,7 @@ function Projects() {
                             setFinalData(data)
                         });
                     } else{
-                        fetchProjects()
+                        window.location.reload();
                     }
                 });
             });
