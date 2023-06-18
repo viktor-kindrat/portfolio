@@ -25,7 +25,7 @@ function Home() {
             })
         }
         const typed = new Typed(typedEl.current, {
-            strings: ['Viktor Kindtat', 'Web developer', 'Web designer', 'Coding fan'],
+            strings: ['Viktor Kindrat', 'Web developer', 'Web designer', 'Coding fan'],
             typeSpeed: 50,
             backDelay: 5000,
             loop: true,
@@ -44,7 +44,7 @@ function Home() {
                 <h1 className="Home__headline">
                     <span className="Home__headline_small Home__move-content">Welcome to the page of</span>
                     <span className="Home__typed-container Home__move-content">
-                        <span ref={typedEl} className="Home__headline_big">Viktor Kindtat</span>
+                        <span ref={typedEl} className="Home__headline_big">Viktor Kindrat</span>
                     </span>
                 </h1>
                 <a className="Home__btn Home__move-content" href={CV} download="CV"> <img height="24" width="24" src={dldSvg} alt="download" className="Home__btn-icon" /> download cv</a>
