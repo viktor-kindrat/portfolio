@@ -9,7 +9,7 @@ import image2 from "./Images/2.webp"
 
 let data = [{
     img: image1,
-    text: "Modern and enthusiastic - that's how those who know me describe me. I'm a 17-year-old web developer from Ukraine who has a great passion for programming and can't imagine his life without it. I am a fast learner and enjoy finding innovative solutions to complex challenges. I have excellent communication skills and work collaboratively with colleagues and clients to ensure projects are delivered to their satisfaction."
+    text: "Modern and enthusiastic - that's how those who know me describe me. I'm a 20-year-old web developer from Ukraine who has a great passion for programming and can't imagine his life without it. I am a fast learner and enjoy finding innovative solutions to complex challenges. I have excellent communication skills and work collaboratively with colleagues and clients to ensure projects are delivered to their satisfaction."
 }, {
     img: image2,
     text: "Embarking on my programming journey, I was fortunate to receive top-notch training at the GoITeens Academy. Here, I had the opportunity to explore and experiment with a variety of programming languages, ultimately discovering my true passion for JavaScript. With my newfound zeal for coding, I enrolled in the highly regarded Creator IT Academy, where I honed my skills in HTML, CSS, and JavaScript, learning the ins and outs of creating stunning websites. Creator was instrumental in equipping me with the technical and soft skills that have led to my success in the field thus far. Now, I am constantly seeking to enhance my knowledge and capabilities, always pushing myself to learn more and stay ahead of the curve."
